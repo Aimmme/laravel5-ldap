@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/Aimmme/laravel5-ldap.svg?branch=master)](https://travis-ci.org/Aimmme/laravel-ldap)
+[![Build Status](https://travis-ci.org/ainme/laravel5-ldap.svg?branch=master)](https://travis-ci.org/ainme/laravel5-ldap)
 ![Built for Laravel 5](https://img.shields.io/badge/Built_for-Laravel-red.svg?style=flat-square)
 [![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/Aimmme/laravel-ldap/blob/master/LICENSE)
 
