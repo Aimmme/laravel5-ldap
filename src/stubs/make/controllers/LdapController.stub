@@ -1,0 +1,30 @@
+<?php
+
+namespace {{namespace}}Http\Controllers\Auth;
+
+use {{namespace}}Http\Controllers\Controller;
+use Aimme\Ldap\AuthenticatesUsers;
+use Illuminate\Http\Request;
+use {{namespace}}User;
+
+class LdapController extends Controller
+{
+    use AuthenticatesUsers;
+
+    /**
+     * Where to redirect users after login.
+     *
+     * @var string
+     */
+    protected $redirectTo = '/ldap/home';
+
+    /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware('guest', ['except' => 'logout']);
+    }
+}

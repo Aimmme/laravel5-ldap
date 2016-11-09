@@ -1,0 +1,27 @@
+
+
+
+/**
+ * Ldap authentication routes, change as you wish
+ */
+
+Route::group([
+    'middleware' => [
+        'web',
+        'ldap'
+        ]
+    ], function () {
+
+    Route::get('/ldap/home', [ 'uses' => 'Auth\HomeController@index'])->name('ldapHome');
+    Route::get('/ldap/user', [ 'uses' => 'Auth\HomeController@ldapUser'])->name('ldapUser');
+});
+
+Route::group(['middleware' => ['web']], function () {
+    Route::get('/ldap/login', 'Auth\LdapController@showLoginForm')->name('ldapLogin');
+    Route::post('/ldap/login', 'Auth\LdapController@login')->name('postLdapLogin');
+    Route::post('/ldap/logout', 'Auth\LdapController@logout')->name('ldapLogout');
+});
+
+/**
+ * Ldap authentication routes end
+ */

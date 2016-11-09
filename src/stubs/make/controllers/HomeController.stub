@@ -1,0 +1,39 @@
+<?php
+
+namespace {{namespace}}Http\Controllers\Auth;
+
+use {{namespace}}Http\Controllers\Controller;
+use Illuminate\Http\Request;
+use Ldap;
+
+class HomeController extends Controller
+{
+    /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware('ldap');
+    }
+
+    /**
+     * Show the application dashboard.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function index()
+    {
+        return view('auth.ldap.home');
+    }
+
+    /**
+     * Uses Ldap facade to return the current logged in user same as Auth::user();
+     * @return Ldap
+     */
+    public function ldapUser()
+    {
+        return Ldap::user();
+    }
+}
