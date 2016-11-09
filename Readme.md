@@ -37,7 +37,7 @@
     
 4 - run these artisan commands
 
-    php artisan php artisan make:ldap-auth
+    php artisan make:ldap-auth
     
     php artisan vendor:publish --provider="Aimme\Ldap\LdapServiceProvider"
 
